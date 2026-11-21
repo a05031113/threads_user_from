@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Threads User Info",
+  "description": "Display user location and follower count on Threads feed",
+  "version": "1.0.10",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.threads.com/*",
+    "https://www.threads.net/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.threads.com/*",
+        "https://www.threads.net/*"
+      ],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

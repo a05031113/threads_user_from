@@ -1,0 +1,39 @@
+/* Threads User Info Extension - Styles */
+
+/* 用戶資訊標籤 */
+.threads-ext-info {
+  color: #777;
+  font-size: inherit;
+  font-weight: normal;
+  margin-left: 4px;
+}
+
+/* 載入中狀態 */
+.threads-ext-info--loading {
+  opacity: 0.5;
+}
+
+/* 深色主題下的顏色調整（Threads 預設是深色） */
+@media (prefers-color-scheme: dark) {
+  .threads-ext-info {
+    color: #888;
+  }
+}
+
+/* 可選：hover 時顯示完整資訊 */
+.threads-ext-info:hover {
+  color: #aaa;
+}
+
+/* 疑似假帳號提示（子元素自帶顏色，不受 .threads-ext-info 的 color / hover 影響） */
+.threads-ext-info .threads-ext-country--foreign {
+  color: #e6b800;
+}
+
+.threads-ext-info .threads-ext-country--missing {
+  color: #ff4d4f;
+}
+
+.threads-ext-info .threads-ext-followers--low {
+  color: #ff4d4f;
+}
